@@ -1,0 +1,34 @@
+﻿@model otomativ_tamirhane.Models.yeni_kayit
+@{
+    ViewBag.Title = "Yeni Kullanici";
+}
+
+<h2>Yeni Kullanıcı</h2>
+<br /><br />
+
+
+    @Html.BeginForm("Create", "MusteriKayit",FormMethod.Post)
+     
+        <label>Ad</label>
+        <br />
+        @Html.TextBoxFor(model=>model.Ad,new {@class="form-control" })
+        <br />
+        <br />
+        <label>Soyad</label>
+        <br />
+         @Html.TextBoxFor(model => model.Soyad, new { @class = "form-control" })
+        <br />
+        <br />
+        <label>Telefon</label>
+        <br />
+         @Html.TextBoxFor(model => model.Telefon, new { @class = "form-control" })
+        <br />
+        <br />
+        <label>E-mail</label>
+        <br />
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        <br />
+        <br />
+        <input type="submit" value="Kaydet" />
+        <a href="/MusteriKayit/Index">Listele</a>
+

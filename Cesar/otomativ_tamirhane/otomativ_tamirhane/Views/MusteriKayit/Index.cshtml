@@ -1,0 +1,15 @@
+﻿@model IEnumerable<otomativ_tamirhane.Models.yeni_kayit>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@foreach (var item in Model)
+{
+    <div>@item.Ad</div>
+    <div>@item.Soyad</div>
+    <div>@item.Telefon</div>
+    <div>@item.Email</div>
+    <hr />
+}
